@@ -1,0 +1,14 @@
+{
+  "name": "maxmccordco",
+  "version": "0.0.0",
+  "description": "My personal site.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max McCord <maxmccord93@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.13.4"
+  }
+}

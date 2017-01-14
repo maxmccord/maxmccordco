@@ -1,0 +1,2 @@
+# Do not add installed dependencies to the repo, to avoid bloat.
+node_modules/**
