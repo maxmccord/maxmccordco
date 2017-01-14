@@ -1,0 +1,11 @@
+{
+  "name": "maxmccordco",
+  "description": "My personal site.",
+  "main": "server.js",
+  "authors": [
+    "Max McCord <maxmccord93@gmail.com>"
+  ],
+  "license": "BSD",
+  "homepage": "https://github.com/maxmccord/maxmccordco",
+  "private": true
+}

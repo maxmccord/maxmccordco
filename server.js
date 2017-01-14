@@ -7,6 +7,7 @@ var express = require('express');
 var PORT = process.argv[2] || 80;
 
 var app = express();
+app.use(express.static('./public', { index:false }));
 
 app.get('/', function (req, res) {
    fs.readFile('html/index.html', function (err, data) {

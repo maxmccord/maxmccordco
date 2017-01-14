@@ -9,6 +9,10 @@
   "author": "Max McCord <maxmccord93@gmail.com>",
   "license": "BSD",
   "dependencies": {
-    "express": "~4.13.4"
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0"
   }
 }
