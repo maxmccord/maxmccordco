@@ -6,3 +6,6 @@ bower_components/**
 
 # Do not add copied vendor files
 public/vendor/**
+
+# Do not add temporary codegen files
+dist/**

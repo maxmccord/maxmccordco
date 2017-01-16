@@ -10,7 +10,7 @@ var app = express();
 app.use(express.static('./public', { index:false }));
 
 app.get('/', function (req, res) {
-   fs.readFile('html/index.html', function (err, data) {
+   fs.readFile('dist/index.html', function (err, data) {
       if (err) return res.status(500).send('Could not load file.');
       res.send(data.toString());
    });

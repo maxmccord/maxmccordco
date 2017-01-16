@@ -1,6 +1,17 @@
 module.exports = function(grunt) {
 
    grunt.initConfig({
+      htmlmin: {
+         dist: {
+            options: {
+               removeComments: true,
+               collapseWhitespace: true
+            },
+            files: {
+               'dist/index.html': 'src/index.html'
+            }
+         }
+      },
       copy: {
          main: {
             files: [
@@ -13,8 +24,9 @@ module.exports = function(grunt) {
    });
 
    // load plugins
+   grunt.loadNpmTasks('grunt-contrib-htmlmin');
    grunt.loadNpmTasks('grunt-contrib-copy');
 
    // run the copy command by default
-   grunt.registerTask('default', ['copy']);
+   grunt.registerTask('default', ['htmlmin', 'copy']);
 };
