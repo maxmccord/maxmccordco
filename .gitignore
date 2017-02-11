@@ -4,8 +4,5 @@ node_modules/**
 # Do not add installed bower dependencies to the repo
 bower_components/**
 
-# Do not add copied vendor files
-public/vendor/**
-
-# Do not add temporary codegen files
-dist/**
+# Do not add the built site
+build/**

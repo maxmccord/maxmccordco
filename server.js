@@ -7,10 +7,10 @@ var express = require('express');
 var PORT = process.argv[2] || 80;
 
 var app = express();
-app.use(express.static('./public', { index:false }));
+app.use(express.static('./build/public', { index:false }));
 
 app.get('/', function (req, res) {
-   fs.readFile('dist/index.html', function (err, data) {
+   fs.readFile('./build/index.html', function (err, data) {
       if (err) return res.status(500).send('Could not load file.');
       res.send(data.toString());
    });
