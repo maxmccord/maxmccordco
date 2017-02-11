@@ -26,14 +26,27 @@ module.exports = function(grunt) {
                { src: './src/resume-2017-02.pdf', dest: './build/resume.pdf' }
             ]
          }
+      },
+      clean: {
+         // completely removes the build directory
+         buildDir: {
+            src: [ './build' ]
+         }
       }
    });
 
    // load plugins
    grunt.loadNpmTasks('grunt-contrib-htmlmin');
    grunt.loadNpmTasks('grunt-contrib-copy');
+   grunt.loadNpmTasks('grunt-contrib-clean');
 
-   // run the copy command by default
-   grunt.registerTask('build', ['htmlmin', 'copy']);
+   // register tasks
+   grunt.registerTask(
+      'build',
+      'Creates a build of the site. This task must ben run before running server.js.',
+      ['htmlmin', 'copy']
+      );
+
+   // default task is to build the site
    grunt.registerTask('default', ['build']);
 };
