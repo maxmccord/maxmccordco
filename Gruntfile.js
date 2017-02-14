@@ -12,6 +12,13 @@ module.exports = function(grunt) {
             }
          }
       },
+      cssmin: {
+         dist: {
+            files: {
+               'build/public/css/homepage.min.css': 'src/css/homepage.css'
+            }
+         }
+      },
       copy: {
          vendorFiles: {
             files: [
@@ -21,15 +28,9 @@ module.exports = function(grunt) {
                { expand: true, cwd: './bower_components/jquery/dist/', src: '**', dest: './build/public/vendor/jquery/' }
             ]
          },
-         // TODO: replace copy:styles with CSS minification
          scripts: {
             files: [
                { expand: true, cwd: './src/js', src: '*.js', dest: './build/public/js/' }
-            ]
-         },
-         styles: {
-            files: [
-               { expand: true, cwd: './src/css', src: '*.css', dest: './build/public/css/' }
             ]
          },
          assets: {
@@ -52,7 +53,7 @@ module.exports = function(grunt) {
          },
          styles: {
             files: [ './src/css/*.css' ],
-            tasks: [ 'copy:styles' ]
+            tasks: [ 'cssmin' ]
          },
          scripts: {
             files: [ './src/js/*.js' ],
@@ -70,6 +71,7 @@ module.exports = function(grunt) {
 
    // load plugins
    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+   grunt.loadNpmTasks('grunt-contrib-cssmin');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-clean');
    grunt.loadNpmTasks('grunt-contrib-watch');
@@ -78,7 +80,7 @@ module.exports = function(grunt) {
    grunt.registerTask(
       'build',
       'Creates a build of the site. This task must ben run before running server.js.',
-      ['htmlmin', 'copy']
+      ['clean', 'htmlmin', 'cssmin', 'copy']
       );
 
    // default task is to build the site
