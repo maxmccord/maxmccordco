@@ -16,6 +16,7 @@ module.exports = function(grunt) {
          vendorFiles: {
             files: [
                // copy bower components to the statically served vendor directory
+               { expand: true, cwd: './bower_components/font-awesome/', src: [ 'css/*', 'fonts/*' ], dest: './build/public/vendor/font-awesome' },
                { expand: true, cwd: './bower_components/bootstrap/dist/', src: '**', dest: './build/public/vendor/bootstrap/' },
                { expand: true, cwd: './bower_components/jquery/dist/', src: '**', dest: './build/public/vendor/jquery/' }
             ]
