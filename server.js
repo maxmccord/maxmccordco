@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/resume', function (req, res) {
-   fs.readFile('./build/resume.pdf', function (err, data) {
+   fs.readFile('./build/pdf/resume.pdf', function (err, data) {
       if (err) return res.status(500).send('Could not load file.');
       res.set('Content-Type', 'application/pdf');
       res.send(data);

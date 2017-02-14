@@ -20,10 +20,16 @@ module.exports = function(grunt) {
                { expand: true, cwd: './bower_components/jquery/dist/', src: '**', dest: './build/public/vendor/jquery/' }
             ]
          },
-         srcFiles: {
+         // TODO: replace copy:styles with CSS minification
+         styles: {
             files: [
-               { expand: true, cwd: './src/css', src: '*.css', dest: './build/public/css/' },
-               { src: './src/resume-2017-02.pdf', dest: './build/resume.pdf' }
+               { expand: true, cwd: './src/css', src: '*.css', dest: './build/public/css/' }
+            ]
+         },
+         assets: {
+            files: [
+               { src: './src/pdf/resume-2017-02.pdf', dest: './build/pdf/resume.pdf' },
+               { expand: true, cwd: './src/img/', src: '**/*.png', dest: './build/public/img/' }
             ]
          }
       },
@@ -32,6 +38,23 @@ module.exports = function(grunt) {
          buildDir: {
             src: [ './build' ]
          }
+      },
+      watch: {
+         html: {
+            files: [ './src/*.html' ],
+            tasks: [ 'htmlmin' ]
+         },
+         styles: {
+            files: [ './src/css/*.css' ],
+            tasks: [ 'copy' ]
+         },
+         assets: {
+            files: [
+               './src/img/**',
+               './src/pdf/**'
+            ],
+            tasks: [ 'copy:assets' ]
+         }
       }
    });
 
@@ -39,6 +62,7 @@ module.exports = function(grunt) {
    grunt.loadNpmTasks('grunt-contrib-htmlmin');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-clean');
+   grunt.loadNpmTasks('grunt-contrib-watch');
 
    // register tasks
    grunt.registerTask(
