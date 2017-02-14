@@ -1,10 +1,12 @@
 // Author: Max McCord
 // Date:   Jan 14, 2017
 
+var config = require('./config');
+
 var fs = require('fs');
 var express = require('express');
 
-var PORT = process.argv[2] || 80;
+var PORT = process.argv[2] || config.defaults.port;
 
 var app = express();
 app.use(express.static('./build/public', { index:false }));
