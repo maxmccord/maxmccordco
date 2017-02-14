@@ -292,7 +292,7 @@ header {
 
 header .intro-text {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 125px;
 }
 
 header .intro-text .intro-lead-in {
@@ -367,17 +367,24 @@ section h3.section-subheading {
 }
 
 #bio img.profile {
-   width: 250px;
-   height: 250px;
    display: block;
    margin-left: auto;
    margin-right: auto;
-   margin-top: -275px;
-
    border: 10px solid #aaaaaa;
    border-radius: 500px;
    -webkit-border-radius: 500px;
    -moz-border-radius: 500px;
+   width: 200px;
+   height: 200px;
+   margin-top: -200px;
+}
+
+@media (min-width: 768px) {
+   #bio img.profile {
+      width: 250px;
+      height: 250px;
+      margin-top: -275px;
+   }
 }
 
 
