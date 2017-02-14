@@ -19,6 +19,18 @@ module.exports = function(grunt) {
             }
          }
       },
+      uglify: {
+         dist: {
+            options: {
+               // this is the default behavior, but I'm leaving it in case I
+               // need to turn it off for debugging purposes later.
+               mangle: true
+            },
+            files: {
+               'build/public/js/homepage.min.js': 'src/js/homepage.js'
+            }
+         }
+      },
       copy: {
          vendorFiles: {
             files: [
@@ -26,11 +38,6 @@ module.exports = function(grunt) {
                { expand: true, cwd: './bower_components/font-awesome/', src: [ 'css/*', 'fonts/*' ], dest: './build/public/vendor/font-awesome' },
                { expand: true, cwd: './bower_components/bootstrap/dist/', src: '**', dest: './build/public/vendor/bootstrap/' },
                { expand: true, cwd: './bower_components/jquery/dist/', src: '**', dest: './build/public/vendor/jquery/' }
-            ]
-         },
-         scripts: {
-            files: [
-               { expand: true, cwd: './src/js', src: '*.js', dest: './build/public/js/' }
             ]
          },
          assets: {
@@ -57,7 +64,7 @@ module.exports = function(grunt) {
          },
          scripts: {
             files: [ './src/js/*.js' ],
-            tasks: [ 'copy:scripts' ]
+            tasks: [ 'uglify' ]
          },
          assets: {
             files: [
@@ -72,6 +79,7 @@ module.exports = function(grunt) {
    // load plugins
    grunt.loadNpmTasks('grunt-contrib-htmlmin');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
+   grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-clean');
    grunt.loadNpmTasks('grunt-contrib-watch');
@@ -80,7 +88,7 @@ module.exports = function(grunt) {
    grunt.registerTask(
       'build',
       'Creates a build of the site. This task must ben run before running server.js.',
-      ['clean', 'htmlmin', 'cssmin', 'copy']
+      ['clean', 'htmlmin', 'cssmin', 'uglify', 'copy']
       );
 
    // default task is to build the site
