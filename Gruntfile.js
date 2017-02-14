@@ -22,6 +22,11 @@ module.exports = function(grunt) {
             ]
          },
          // TODO: replace copy:styles with CSS minification
+         scripts: {
+            files: [
+               { expand: true, cwd: './src/js', src: '*.js', dest: './build/public/js/' }
+            ]
+         },
          styles: {
             files: [
                { expand: true, cwd: './src/css', src: '*.css', dest: './build/public/css/' }
@@ -47,7 +52,11 @@ module.exports = function(grunt) {
          },
          styles: {
             files: [ './src/css/*.css' ],
-            tasks: [ 'copy' ]
+            tasks: [ 'copy:styles' ]
+         },
+         scripts: {
+            files: [ './src/js/*.js' ],
+            tasks: [ 'copy:scripts' ]
          },
          assets: {
             files: [
