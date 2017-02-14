@@ -13,6 +13,9 @@ module.exports = function(grunt) {
          }
       },
       cssmin: {
+         options: {
+            keepSpecialComments: false
+         },
          dist: {
             files: {
                'build/public/css/homepage.min.css': 'src/css/homepage.css'
@@ -43,7 +46,7 @@ module.exports = function(grunt) {
          assets: {
             files: [
                { src: './src/pdf/resume-2017-02.pdf', dest: './build/pdf/resume.pdf' },
-               { expand: true, cwd: './src/img/', src: '**/*.png', dest: './build/public/img/' }
+               { expand: true, cwd: './src/img/', src: '**/*.*', dest: './build/public/img/' }
             ]
          }
       },

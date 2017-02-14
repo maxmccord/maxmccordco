@@ -243,8 +243,8 @@ fieldset[disabled] .btn-xl.active {
 
 @media (min-width: 768px) {
   .navbar-custom {
-    // TODO: put this back when I figure out the affix things
-    // background-color: transparent;
+    /* TODO: put this back when I figure out the affix things
+    background-color: transparent; */
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -276,8 +276,8 @@ fieldset[disabled] .btn-xl.active {
 /*---------------------------------- Header ----------------------------------*/
 
 header {
-  // TODO: bring back the background image when I find the right pic
-  // background-image: url('/img/austin-evening.jpg');
+  /* TODO: bring back the background image when I find the right pic
+  background-image: url('/img/austin-evening.jpg'); */
   background-color: #000000;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -297,7 +297,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  // font-style: italic;
+  /* font-style: italic; */
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
@@ -364,6 +364,20 @@ section h3.section-subheading {
 
 #bio .bio-summary {
   padding-right: 100px;
+}
+
+#bio img.profile {
+   width: 250px;
+   height: 250px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: -275px;
+
+   border: 10px solid #aaaaaa;
+   border-radius: 500px;
+   -webkit-border-radius: 500px;
+   -moz-border-radius: 500px;
 }
 
 
