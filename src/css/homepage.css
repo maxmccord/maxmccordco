@@ -243,8 +243,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media (min-width: 768px) {
   .navbar-custom {
-    /* TODO: put this back when I figure out the affix things
-    background-color: transparent; */
+    background-color: transparent;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
