@@ -362,8 +362,10 @@ section h3.section-subheading {
   }
 }
 
-#bio .bio-summary {
-  padding-right: 100px;
+@media (min-width: 768px) {
+  #bio .bio-summary {
+    padding-right: 100px;
+  }
 }
 
 #bio img.profile {
