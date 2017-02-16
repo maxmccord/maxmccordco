@@ -22,7 +22,7 @@ body {
 }
 
 .text-primary {
-  color: #fed136;
+  color: #f75151;
 }
 
 p {
@@ -43,14 +43,14 @@ a.active {
 }
 
 a {
-  color: #fed136;
+  color: #f75151;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #fec503;
+  color: #f63e3e;
 }
 
 h1,
@@ -78,8 +78,8 @@ h6 {
 
 .btn-primary {
   color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #f75151;
+  border-color: #f75151;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -91,8 +91,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: #f63e3e;
+  border-color: #f63333;
 }
 
 .btn-primary:active,
@@ -116,19 +116,19 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #f75151;
+  border-color: #f75151;
 }
 
 .btn-primary .badge {
-  color: #fed136;
+  color: #f75151;
   background-color: white;
 }
 
 .btn-xl {
   color: white;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #f75151;
+  border-color: #f75151;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -143,8 +143,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: white;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: #f63e3e;
+  border-color: #f63333;
 }
 
 .btn-xl:active,
@@ -168,12 +168,12 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #f75151;
+  border-color: #f75151;
 }
 
 .btn-xl .badge {
-  color: #fed136;
+  color: #f75151;
   background-color: white;
 }
 
@@ -186,7 +186,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-custom .navbar-brand {
-  color: #fed136;
+  color: white;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
@@ -194,7 +194,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
-  color: #fec503;
+  color: #f75151;
 }
 
 .navbar-custom .navbar-collapse {
@@ -202,8 +202,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-custom .navbar-toggle {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #f75151;
+  border-color: #f75151;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: white;
@@ -212,7 +212,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #fed136;
+  background-color: #f75151;
 }
 
 .navbar-custom .nav li a {
@@ -225,25 +225,25 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #fed136;
+  color: #f75151;
   outline: none;
 }
 
 .navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #fed136;
+  background-color: #f75151;
 }
 
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #fec503;
+  background-color: #f63e3e;
 }
 
 @media (min-width: 768px) {
   .navbar-custom {
-    background-color: transparent;
+    background: rgba(0, 0, 0, 0.7);
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -264,6 +264,7 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
   .navbar-custom.affix {
     background-color: #222222;
+    opacity: 1;
     padding: 10px 0;
   }
   .navbar-custom.affix .navbar-brand {
@@ -275,9 +276,7 @@ fieldset[disabled] .btn-xl.active {
 /*---------------------------------- Header ----------------------------------*/
 
 header {
-  /* TODO: bring back the background image when I find the right pic
-  background-image: url('/img/austin-evening.jpg'); */
-  background-color: #000000;
+  background-image: url('/img/header/austin-river-darker-2016px.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -294,14 +293,6 @@ header .intro-text {
   padding-bottom: 125px;
 }
 
-header .intro-text .intro-lead-in {
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* font-style: italic; */
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 25px;
-}
-
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -315,13 +306,6 @@ header .intro-text .intro-heading {
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
-  }
-  header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: italic;
-    font-size: 40px;
-    line-height: 40px;
-    margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -361,7 +345,7 @@ section h3.section-subheading {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #bio .bio-summary {
     padding-right: 100px;
   }
@@ -371,7 +355,7 @@ section h3.section-subheading {
    display: block;
    margin-left: auto;
    margin-right: auto;
-   border: 10px solid #aaaaaa;
+   border: 10px solid white;
    border-radius: 500px;
    -webkit-border-radius: 500px;
    -moz-border-radius: 500px;
@@ -445,7 +429,7 @@ section h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #fed136;
+  background-color: #f75151;
   color: white;
   border-radius: 100%;
   border: 7px solid #d1d1d1;
