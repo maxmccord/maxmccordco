@@ -8,6 +8,7 @@
  *    Section
  *    Timeline
  *    Footer
+ *    Selection
  */
 
 /*---------------------------------- Global ----------------------------------*/
@@ -544,10 +545,34 @@ section h3.section-subheading {
 }
 
 
-/*--------------------------------- Footer ---------------------------------*/
+/*---------------------------------- Footer ----------------------------------*/
 
 footer {
   padding: 25px 0;
   text-align: center;
   background-color: #222222;
+}
+
+/*-------------------------------- Selection ---------------------------------*/
+
+::-moz-selection {
+  text-shadow: none;
+  background: #f98585;
+}
+
+::selection {
+  text-shadow: none;
+  background: #f98585;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  webkit-tap-highlight-color: #f98585;
 }
