@@ -323,7 +323,7 @@ header .intro-text .intro-heading {
 /*--------------------------------- Section ----------------------------------*/
 
 section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 section h2.section-heading {
@@ -341,12 +341,6 @@ section h3.section-subheading {
   margin-bottom: 75px;
 }
 
-@media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
-}
-
 @media (min-width: 1200px) {
   #bio .bio-summary {
     padding-right: 100px;
@@ -354,24 +348,36 @@ section h3.section-subheading {
 }
 
 #bio img.profile {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   border: 10px solid white;
-   border-radius: 500px;
-   -webkit-border-radius: 500px;
-   -moz-border-radius: 500px;
-   width: 200px;
-   height: 200px;
-   margin-top: -200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  width: 200px;
+  height: 200px;
+  margin-top: -160px;
 }
 
 @media (min-width: 768px) {
-   #bio img.profile {
-      width: 250px;
-      height: 250px;
-      margin-top: -275px;
-   }
+  #bio img.profile {
+    width: 250px;
+    height: 250px;
+    margin-top: -185px;
+  }
+}
+
+#bio h2.section-heading {
+  font-size: 30px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  #bio h2.section-heading {
+    margin-top: 20px;
+  }
 }
 
 
