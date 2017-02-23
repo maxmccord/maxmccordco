@@ -625,6 +625,23 @@ section#contact .text-danger {
 
 /*--------------------------------- Projects ---------------------------------*/
 
+#projects .project-heading a {
+  font-size: 0.8em;
+}
+
+#projects .project-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#projects .projects-older-heading {
+  margin: 40px;
+  text-align: center;
+}
+
 #projects .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -666,6 +683,7 @@ section#contact .text-danger {
   margin: 0;
 }
 #projects .portfolio-item .portfolio-caption {
+  height: 110px;
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
