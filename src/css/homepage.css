@@ -626,7 +626,8 @@ section#contact .text-danger {
 /*--------------------------------- Projects ---------------------------------*/
 
 #projects .project-heading a {
-  font-size: 0.8em;
+  font-size: 0.6em;
+  text-transform: none;
 }
 
 #projects .project-subheading {
