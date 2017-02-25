@@ -339,7 +339,7 @@ section h3.section-subheading {
   text-transform: none;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
 }
 
 @media (min-width: 1200px) {
@@ -625,9 +625,18 @@ section#contact .text-danger {
 
 /*--------------------------------- Projects ---------------------------------*/
 
-#projects .project-heading a {
-  font-size: 0.6em;
-  text-transform: none;
+#projects img.project-logo {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid #D3D3D3;
+  border-radius: 500px;
+}
+
+#projects .project-heading {
+  text-align: center;
 }
 
 #projects .project-subheading {
@@ -636,10 +645,23 @@ section#contact .text-danger {
   text-transform: none;
   font-style: italic;
   font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* remove centering when side-by-side */
+@media (min-width: 992px) {
+  #projects .project-heading {
+    text-align: left;
+  }
+  #projects .project-subheading {
+    text-align: left;
+  }
 }
 
 #projects .projects-older-heading {
-  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
