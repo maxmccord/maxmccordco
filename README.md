@@ -16,6 +16,9 @@ $ bower install
 # create a build of the site
 $ grunt
 
+# configure SMTP settings in config.json
+$ vim config.json
+
 # start hosing the site
 $ node server
 ```
