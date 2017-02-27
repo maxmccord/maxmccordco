@@ -1,5 +1,10 @@
 {
    "defaults": {
       "port": 80
+   },
+   "smtp": {
+      "service": "xxx",
+      "user": "xxx",
+      "pass": "xxx"
    }
 }

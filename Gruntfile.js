@@ -30,7 +30,9 @@ module.exports = function(grunt) {
                mangle: true
             },
             files: {
-               'build/public/js/homepage.min.js': 'src/js/homepage.js'
+               'build/public/js/homepage.min.js': 'src/js/homepage.js',
+               'build/public/js/contactme.min.js': 'src/js/contactme.js',
+               'build/public/js/jqBootstrapValidation.min.js': 'src/js/jqBootstrapValidation.js'
             }
          }
       },
